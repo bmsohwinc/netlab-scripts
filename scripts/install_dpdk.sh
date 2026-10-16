@@ -1,5 +1,7 @@
 # download dpdk
 
+cd $HOME
+
 version=25.11.2
 
 wget https://fast.dpdk.org/rel/dpdk-${version}.tar.xz
@@ -7,7 +9,7 @@ wget https://fast.dpdk.org/rel/dpdk-${version}.tar.xz
 tar xJf dpdk-${version}.tar.xz
 rm dpdk-${version}.tar.xz
 
-cd dpdk-stable-${version}/
+cd ~/dpdk-stable-${version}/
 
 # install python
 sudo apt-get update
@@ -29,7 +31,7 @@ sudo apt install -y python3-pyelftools
 pip install pyelftools
 
 # build dpdk
-cd dpdk-stable-${version}/
+cd ~/dpdk-stable-${version}/
 
 meson setup build
 cd build
